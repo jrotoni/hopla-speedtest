@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Currently building Hopla Speed Measuring Gauge
+          Currently building Hopla Speed Measuring Gauge!
         </p>
         <a
           className="App-link"
