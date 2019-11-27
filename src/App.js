@@ -1,16 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Currently building Hopla Speed Measuring Gauge!
-        </p>
-      </header>
+      <div className="container">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,22 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900&display=swap');
+
 .App {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+span {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  min-height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 2em 0;
+}
+
+.logo-name {
+  text-transform: uppercase;
+  color: #62FAFF;
+  font-size: 30px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+header ul li {
+  padding: 10px 30px;
+}
+
+header a {
+  color: #D7EEE9;
+  text-decoration: none;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#goBtn {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 6px solid #37F6CD;
+  transition: all 0.3ms fade;
+}
+
+#goBtn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(rgba(20,21,38,.95),rgba(20,21,38,.95)),linear-gradient(to bottom,#2de5d1,#1fa4e9);
+}
+
+#goBtn:focus {
+  outline-style: none;
+}
+
+#goBtn span {
+  color: #D7EEE9;
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+}
+
+.result-div {
+  width: 50%;
+}
+
+.rating {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+
+.label {
+  text-transform: uppercase;
+  color: #447577;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.label.small {
+  font-size: 15px;
+}
+
+.label.big {
+  font-size: 18px;
+}
+
+.result {
+  text-transform: uppercase;
+  color: #D7EEE9;
+}
+
+.result.small {
+  font-size: 30px;
+}
+
+.result.big {
+  font-size: 45px;
+}
+
+.otherInfo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  text-align: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.info > .result.small {
+  font-size: 21px;
+}
+
+.good {
+  height: 150px;
+  filter: invert(98%) sepia(43%) saturate(4998%) hue-rotate(88deg) brightness(101%) contrast(91%);
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.test-again {
+  border-radius: 25px;
+  padding: 10px 40px;
+  text-align: center;
+  background-color: #62FAFF;
+  border: 1px solid #62FAFF;
+  cursor: pointer;
+}
+
+.test-again > span {
+  color: #0f0f0f;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
 }
