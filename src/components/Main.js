@@ -10,13 +10,13 @@ export class Main extends Component {
   }
 
   showResult = () => {
-    this.setState({ isResult: true })
+    this.setState({ isResult: !this.state.isResult })
   }
 
   render() {
     return (
       <main>
-        {this.state.isResult ? <Results /> : <GoButton showResult={this.showResult} />}
+        {this.state.isResult ? <Results showResult={this.showResult} /> : <GoButton showResult={this.showResult} />}
       </main>
     )
   }

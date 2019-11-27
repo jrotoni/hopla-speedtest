@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Good from './check.svg'
+import Good from '../svg/check.svg'
 
 export class Results extends Component {
   render() {
@@ -37,7 +37,7 @@ export class Results extends Component {
           </div>
         </div>
         <div className="button-container">
-          <button className="test-again"><span>Test Again</span></button>
+          <button className="test-again" onClick={this.props.showResult}><span>Test Again</span></button>
         </div>
       </div>
     )

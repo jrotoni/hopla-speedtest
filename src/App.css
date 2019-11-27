@@ -11,8 +11,6 @@ span {
 
 .container {
   min-height: 100%;
-  width: 90%;
-  margin: 0 auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
@@ -22,7 +20,7 @@ header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 2em 0;
+  padding: 2em 5em;
 }
 
 .logo-name {
@@ -45,8 +43,7 @@ header a {
   color: #D7EEE9;
   text-decoration: none;
 }
-
-main {
+.main-container, .results {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -148,8 +145,12 @@ main {
   padding: 10px 40px;
   text-align: center;
   background-color: #62FAFF;
-  border: 1px solid #62FAFF;
+  border: 3px solid #37F6CD;
   cursor: pointer;
+}
+
+.test-again:hover {
+  background-color: #95fcff;
 }
 
 .test-again > span {
@@ -157,4 +158,82 @@ main {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
+}
+
+footer {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  header ul {
+    display: none;
+  }
+  header {
+    display: block;
+    text-align: center;
+  }
+  #goBtn {
+    width: 200px;
+    height: 200px;
+  }
+  #goBtn span {
+    font-size: 3rem;
+  }
+  .results {
+    position: relative;
+  }
+  footer {
+    display: block;
+  }
+  .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: #000;
+    padding: 1.2em 1.5em;
+  }
+
+  .footer-menu .icon img{
+    cursor: pointer;
+    height: 35px;
+    filter: invert(40%) sepia(36%) saturate(434%) hue-rotate(134deg) brightness(95%) contrast(87%);
+  }
+
+  .footer-menu .icon.active img {
+    filter: invert(93%) sepia(80%) saturate(6647%) hue-rotate(148deg) brightness(103%) contrast(103%);
+  }
+
+  .result-container {
+    display: block;
+    width: auto;
+  }
+
+  .result-div {
+    width: 100%;
+  }
+
+  .figures {
+    text-align: center;
+  }
+
+  .speed {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+
+  .label.big {
+    font-size: 14px;
+  }
+
+  .result.big {
+    font-size: 31px;
+  }
+
+  .otherInfo {
+    padding: 1.2em;
+  }
+
+  .button-container {
+    margin: 30px;
+  } 
 }
